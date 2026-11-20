@@ -1,0 +1,9 @@
+{
+  "outputDirectory": "dist/miAIlocal/browser",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
