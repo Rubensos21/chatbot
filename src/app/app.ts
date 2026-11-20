@@ -2,6 +2,7 @@ import { Component, signal, inject, ViewChild, ElementRef, AfterViewChecked } fr
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MarkdownPipe } from './markdown.pipe';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -11,7 +12,7 @@ interface ChatMessage {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MarkdownPipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

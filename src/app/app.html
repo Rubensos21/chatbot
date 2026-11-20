@@ -67,7 +67,8 @@
                  'bg-slate-800 dark:bg-[#1e293b] text-white dark:text-slate-100 rounded-tr-sm': msg.role === 'user',
                  'bg-transparent text-slate-700 dark:text-slate-300': msg.role === 'assistant'
                }">
-            <p class="whitespace-pre-wrap break-words">{{ msg.content }}</p>
+            <div *ngIf="msg.role === 'assistant'" class="markdown-body" [innerHTML]="msg.content | markdown"></div>
+            <p *ngIf="msg.role === 'user'" class="whitespace-pre-wrap break-words">{{ msg.content }}</p>
           </div>
         </div>
         
